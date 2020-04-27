@@ -122,6 +122,13 @@ export const getPost = (id) => async (dispatch) => {
   }
 };
 
+// Edit post
+
+export const editPost = (id) => async (dispatch) => {
+  try {
+  } catch (err) {}
+};
+
 // Add comment
 export const addComment = (postId, formData) => async (dispatch) => {
   const config = {
