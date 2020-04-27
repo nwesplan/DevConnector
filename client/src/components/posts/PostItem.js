@@ -58,15 +58,6 @@ const PostItem = ({
                 <i class='fas fa-times'></i>
               </button>
             )}
-            {!auth.loading && user === auth.user._id && (
-              <button
-                onClick={(e) => deletePost(_id)}
-                type='button'
-                class='btn btn-danger'
-              >
-                <i class='fas fa-times'></i>
-              </button>
-            )}
           </Fragment>
         )}
       </div>
