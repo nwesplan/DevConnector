@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import Moment from 'react-moment';
 import { connect } from 'react-redux';
-import { addLike, removeLike, deletePost } from '../../actions/post';
+import { addLike, removeLike, deletePost, editPost } from '../../actions/post';
 
 const PostItem = ({
   addLike,
@@ -49,6 +49,15 @@ const PostItem = ({
                 <span class='comment-count'>{comments.length}</span>
               )}
             </Link>
+            {!auth.loading && user === auth.user._id && (
+              <button
+                onClick={(e) => editPost(_id)}
+                type='button'
+                class='btn btn-success'
+              >
+                <i class='fas fa-times'></i>
+              </button>
+            )}
             {!auth.loading && user === auth.user._id && (
               <button
                 onClick={(e) => deletePost(_id)}
