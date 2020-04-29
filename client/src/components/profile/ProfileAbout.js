@@ -8,7 +8,7 @@ const ProfileAbout = ({
     user: { name },
   },
 }) => {
-  bioarray = bio.split('...');
+  const bioarray = bio.split('...');
   return (
     <div class='profile-about bg-light p-2'>
       {bio && (
