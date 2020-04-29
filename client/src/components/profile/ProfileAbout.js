@@ -8,12 +8,14 @@ const ProfileAbout = ({
     user: { name },
   },
 }) => {
+  bioarray = bio.split('...');
   return (
     <div class='profile-about bg-light p-2'>
       {bio && (
         <Fragment>
           <h2 class='text-primary'>{name.trim().split(' ')[0]}'s Bio</h2>
-          <p>{bio.split('...')}</p>
+          <p>{bioarray[0]}</p>
+          <p>{bioarray[1]}</p>
           <div class='line'></div>
         </Fragment>
       )}
