@@ -15,7 +15,10 @@ const ProfileAbout = ({
         <Fragment>
           <h2 class='text-primary'>{name.trim().split(' ')[0]}'s Bio</h2>
           {bio.split('...').map((paragraph) => (
-            <p>{paragraph}</p>
+            <p>
+              {paragraph}
+              <br />
+            </p>
           ))}
 
           <div class='line'></div>
